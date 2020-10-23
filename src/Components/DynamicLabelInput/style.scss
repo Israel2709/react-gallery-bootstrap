@@ -1,0 +1,43 @@
+.custom-form-group{
+    position: relative;
+    label{
+        position: absolute;
+        left:15px;
+        display: flex;
+        padding:0 5px;
+        align-items: center;
+        font-size:16px;
+        transition:top .5s ease, height .5s ease, font-size .5s ease;
+        top:1px;
+        height:calc(100% - 2px);
+        background:white;
+    }
+    input{
+        width:100%;
+        height:40px;
+        padding-left:15px;
+        border-radius:5px;
+        border:1px solid #333;
+    }
+    &.has-focus, &.has-content{
+        color:purple;
+        label{
+            border: none;
+            top:-5px;
+            height:10px;
+            font-size:10px;
+        }
+        input{
+            color:purple;
+            outline:none;
+            border:1px solid purple;
+        }
+    }
+    &.has-error{
+        color:red;
+        input{
+            border-color:red;
+            color:red;
+        }
+    }
+}
